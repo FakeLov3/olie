@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5255F686245C911B003A246F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F685245C911B003A246F /* AppDelegate.swift */; };
+		5255F688245C911B003A246F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F687245C911B003A246F /* SceneDelegate.swift */; };
+		5255F68C245C911C003A246F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5255F68B245C911C003A246F /* Assets.xcassets */; };
+		5255F68F245C911C003A246F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5255F68E245C911C003A246F /* Preview Assets.xcassets */; };
+		5255F692245C911C003A246F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5255F690245C911C003A246F /* LaunchScreen.storyboard */; };
+		5255F69B245C91F0003A246F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F69A245C91F0003A246F /* FeedbackViewController.swift */; };
+		5255F69D245C920B003A246F /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F69C245C920B003A246F /* FeedbackViewModel.swift */; };
+		5255F69F245C9819003A246F /* FeedbackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F69E245C9819003A246F /* FeedbackCoordinator.swift */; };
+		5255F6A2245C9C2D003A246F /* Olie+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6A1245C9C2D003A246F /* Olie+UIColor.swift */; };
+		5255F6A4245C9F52003A246F /* OlieView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6A3245C9F52003A246F /* OlieView1.swift */; };
+		5255F6AC245CA304003A246F /* Styleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6AB245CA304003A246F /* Styleable.swift */; };
+		5255F6AE245CA31B003A246F /* OlieLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6AD245CA31B003A246F /* OlieLabel.swift */; };
+		5255F6B0245CA4E9003A246F /* Olie+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6AF245CA4E9003A246F /* Olie+UIFont.swift */; };
+		5255F6B2245CE3B5003A246F /* Olie+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6B1245CE3B5003A246F /* Olie+CGFloat.swift */; };
+		5255F6B4245D0409003A246F /* OlieView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6B3245D0409003A246F /* OlieView2.swift */; };
+		5255F6B7245D09AF003A246F /* ServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6B6245D09AF003A246F /* ServicesProtocol.swift */; };
+		5255F6BA245D09DE003A246F /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6B9245D09DE003A246F /* Services.swift */; };
+		5255F6BC245D0D44003A246F /* ServiceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6BB245D0D44003A246F /* ServiceModels.swift */; };
+		5255F6C4245DBE90003A246F /* ServicesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6C3245DBE90003A246F /* ServicesError.swift */; };
+		5255F6CC245F01B8003A246F /* QuestionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6CB245F01B8003A246F /* QuestionCoordinator.swift */; };
+		5255F6CE245F01CC003A246F /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6CD245F01CC003A246F /* QuestionViewController.swift */; };
+		5255F6D0245F01FE003A246F /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6CF245F01FE003A246F /* QuestionViewModel.swift */; };
+		5255F6D2245F0F4E003A246F /* OlieView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6D1245F0F4E003A246F /* OlieView3.swift */; };
+		5255F6D4245F10A1003A246F /* OlieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6D3245F10A1003A246F /* OlieButton.swift */; };
+		5255F6D6245F14DA003A246F /* OlieScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6D5245F14DA003A246F /* OlieScrollView.swift */; };
+		5255F6D9245F3BA0003A246F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6D8245F3BA0003A246F /* ActivityIndicator.swift */; };
+		5255F6DC245F9853003A246F /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6DB245F9853003A246F /* Tag.swift */; };
+		5255F6DE245F9B1A003A246F /* OlieView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6DD245F9B1A003A246F /* OlieView4.swift */; };
+		5255F6E0245FA971003A246F /* OlieView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6DF245FA971003A246F /* OlieView5.swift */; };
+		5255F6E324604190003A246F /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6E224604190003A246F /* TagsViewController.swift */; };
+		5255F6E724608712003A246F /* OlieView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6E624608712003A246F /* OlieView6.swift */; };
+		5255F6EA2460A3D9003A246F /* SimulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6E92460A3D9003A246F /* SimulateViewController.swift */; };
+		5255F6ED2460A52F003A246F /* SimulateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6EC2460A52F003A246F /* SimulateViewModel.swift */; };
+		5255F6EF2460A655003A246F /* OlieView7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255F6EE2460A655003A246F /* OlieView7.swift */; };
+		C288E485AD8538B3CBFBA390 /* Pods_Olie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A3808E10BE534B156CEDBB /* Pods_Olie.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5255F682245C911B003A246F /* Olie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5255F685245C911B003A246F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5255F687245C911B003A246F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5255F68B245C911C003A246F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5255F68E245C911C003A246F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5255F691245C911C003A246F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5255F693245C911C003A246F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5255F69A245C91F0003A246F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		5255F69C245C920B003A246F /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		5255F69E245C9819003A246F /* FeedbackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCoordinator.swift; sourceTree = "<group>"; };
+		5255F6A1245C9C2D003A246F /* Olie+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Olie+UIColor.swift"; sourceTree = "<group>"; };
+		5255F6A3245C9F52003A246F /* OlieView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView1.swift; sourceTree = "<group>"; };
+		5255F6AB245CA304003A246F /* Styleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styleable.swift; sourceTree = "<group>"; };
+		5255F6AD245CA31B003A246F /* OlieLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieLabel.swift; sourceTree = "<group>"; };
+		5255F6AF245CA4E9003A246F /* Olie+UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Olie+UIFont.swift"; sourceTree = "<group>"; };
+		5255F6B1245CE3B5003A246F /* Olie+CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Olie+CGFloat.swift"; sourceTree = "<group>"; };
+		5255F6B3245D0409003A246F /* OlieView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView2.swift; sourceTree = "<group>"; };
+		5255F6B6245D09AF003A246F /* ServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesProtocol.swift; sourceTree = "<group>"; };
+		5255F6B9245D09DE003A246F /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		5255F6BB245D0D44003A246F /* ServiceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModels.swift; sourceTree = "<group>"; };
+		5255F6C3245DBE90003A246F /* ServicesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesError.swift; sourceTree = "<group>"; };
+		5255F6CB245F01B8003A246F /* QuestionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCoordinator.swift; sourceTree = "<group>"; };
+		5255F6CD245F01CC003A246F /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		5255F6CF245F01FE003A246F /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		5255F6D1245F0F4E003A246F /* OlieView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView3.swift; sourceTree = "<group>"; };
+		5255F6D3245F10A1003A246F /* OlieButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieButton.swift; sourceTree = "<group>"; };
+		5255F6D5245F14DA003A246F /* OlieScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieScrollView.swift; sourceTree = "<group>"; };
+		5255F6D8245F3BA0003A246F /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		5255F6DB245F9853003A246F /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		5255F6DD245F9B1A003A246F /* OlieView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView4.swift; sourceTree = "<group>"; };
+		5255F6DF245FA971003A246F /* OlieView5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView5.swift; sourceTree = "<group>"; };
+		5255F6E224604190003A246F /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		5255F6E624608712003A246F /* OlieView6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView6.swift; sourceTree = "<group>"; };
+		5255F6E92460A3D9003A246F /* SimulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateViewController.swift; sourceTree = "<group>"; };
+		5255F6EC2460A52F003A246F /* SimulateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateViewModel.swift; sourceTree = "<group>"; };
+		5255F6EE2460A655003A246F /* OlieView7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlieView7.swift; sourceTree = "<group>"; };
+		6631F8F1831DEC6C898A77D6 /* Pods-Olie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olie.debug.xcconfig"; path = "Target Support Files/Pods-Olie/Pods-Olie.debug.xcconfig"; sourceTree = "<group>"; };
+		76A3808E10BE534B156CEDBB /* Pods_Olie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Olie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7AD4B5E80FCB79F4C4484E /* Pods-Olie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Olie.release.xcconfig"; path = "Target Support Files/Pods-Olie/Pods-Olie.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5255F67F245C911B003A246F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C288E485AD8538B3CBFBA390 /* Pods_Olie.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5255F679245C911B003A246F = {
+			isa = PBXGroup;
+			children = (
+				5255F684245C911B003A246F /* Olie */,
+				5255F683245C911B003A246F /* Products */,
+				B27E36F2EB9237C2954C8B08 /* Pods */,
+				830E91524D95F67361D38BA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5255F683245C911B003A246F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5255F682245C911B003A246F /* Olie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5255F684245C911B003A246F /* Olie */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6DA245F984D003A246F /* Models */,
+				5255F6D7245F3B92003A246F /* RxSwiftUtilities */,
+				5255F6A0245C99C6003A246F /* OlieKit */,
+				5255F6B5245D0945003A246F /* Services */,
+				5255F6EB2460A417003A246F /* QuestionFlow */,
+				5255F699245C91E3003A246F /* Feedback */,
+				5255F685245C911B003A246F /* AppDelegate.swift */,
+				5255F687245C911B003A246F /* SceneDelegate.swift */,
+				5255F68B245C911C003A246F /* Assets.xcassets */,
+				5255F690245C911C003A246F /* LaunchScreen.storyboard */,
+				5255F693245C911C003A246F /* Info.plist */,
+				5255F68D245C911C003A246F /* Preview Content */,
+			);
+			path = Olie;
+			sourceTree = "<group>";
+		};
+		5255F68D245C911C003A246F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5255F68E245C911C003A246F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5255F699245C91E3003A246F /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				5255F69E245C9819003A246F /* FeedbackCoordinator.swift */,
+				5255F69A245C91F0003A246F /* FeedbackViewController.swift */,
+				5255F69C245C920B003A246F /* FeedbackViewModel.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		5255F6A0245C99C6003A246F /* OlieKit */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6AF245CA4E9003A246F /* Olie+UIFont.swift */,
+				5255F6A1245C9C2D003A246F /* Olie+UIColor.swift */,
+				5255F6B1245CE3B5003A246F /* Olie+CGFloat.swift */,
+				5255F6AB245CA304003A246F /* Styleable.swift */,
+				5255F6AD245CA31B003A246F /* OlieLabel.swift */,
+				5255F6D3245F10A1003A246F /* OlieButton.swift */,
+				5255F6D5245F14DA003A246F /* OlieScrollView.swift */,
+				5255F6E224604190003A246F /* TagsViewController.swift */,
+				5255F6A3245C9F52003A246F /* OlieView1.swift */,
+				5255F6B3245D0409003A246F /* OlieView2.swift */,
+				5255F6D1245F0F4E003A246F /* OlieView3.swift */,
+				5255F6DD245F9B1A003A246F /* OlieView4.swift */,
+				5255F6DF245FA971003A246F /* OlieView5.swift */,
+				5255F6E624608712003A246F /* OlieView6.swift */,
+				5255F6EE2460A655003A246F /* OlieView7.swift */,
+			);
+			path = OlieKit;
+			sourceTree = "<group>";
+		};
+		5255F6B5245D0945003A246F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6B6245D09AF003A246F /* ServicesProtocol.swift */,
+				5255F6B9245D09DE003A246F /* Services.swift */,
+				5255F6BB245D0D44003A246F /* ServiceModels.swift */,
+				5255F6C3245DBE90003A246F /* ServicesError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5255F6CA245F01A3003A246F /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6CD245F01CC003A246F /* QuestionViewController.swift */,
+				5255F6CF245F01FE003A246F /* QuestionViewModel.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		5255F6D7245F3B92003A246F /* RxSwiftUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6D8245F3BA0003A246F /* ActivityIndicator.swift */,
+			);
+			path = RxSwiftUtilities;
+			sourceTree = "<group>";
+		};
+		5255F6DA245F984D003A246F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6DB245F9853003A246F /* Tag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5255F6E82460A3C9003A246F /* Simulate */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6E92460A3D9003A246F /* SimulateViewController.swift */,
+				5255F6EC2460A52F003A246F /* SimulateViewModel.swift */,
+			);
+			path = Simulate;
+			sourceTree = "<group>";
+		};
+		5255F6EB2460A417003A246F /* QuestionFlow */ = {
+			isa = PBXGroup;
+			children = (
+				5255F6CB245F01B8003A246F /* QuestionCoordinator.swift */,
+				5255F6CA245F01A3003A246F /* Question */,
+				5255F6E82460A3C9003A246F /* Simulate */,
+			);
+			path = QuestionFlow;
+			sourceTree = "<group>";
+		};
+		830E91524D95F67361D38BA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A3808E10BE534B156CEDBB /* Pods_Olie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B27E36F2EB9237C2954C8B08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6631F8F1831DEC6C898A77D6 /* Pods-Olie.debug.xcconfig */,
+				BA7AD4B5E80FCB79F4C4484E /* Pods-Olie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5255F681245C911B003A246F /* Olie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5255F696245C911C003A246F /* Build configuration list for PBXNativeTarget "Olie" */;
+			buildPhases = (
+				FDB3309F28AD61D02929501F /* [CP] Check Pods Manifest.lock */,
+				5255F67E245C911B003A246F /* Sources */,
+				5255F67F245C911B003A246F /* Frameworks */,
+				5255F680245C911B003A246F /* Resources */,
+				41C033EDE1582FCA3BEB3BCE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Olie;
+			productName = Olie;
+			productReference = 5255F682245C911B003A246F /* Olie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5255F67A245C911B003A246F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Olie;
+				TargetAttributes = {
+					5255F681245C911B003A246F = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5255F67D245C911B003A246F /* Build configuration list for PBXProject "Olie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5255F679245C911B003A246F;
+			productRefGroup = 5255F683245C911B003A246F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5255F681245C911B003A246F /* Olie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5255F680245C911B003A246F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5255F692245C911C003A246F /* LaunchScreen.storyboard in Resources */,
+				5255F68F245C911C003A246F /* Preview Assets.xcassets in Resources */,
+				5255F68C245C911C003A246F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41C033EDE1582FCA3BEB3BCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Olie/Pods-Olie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Olie/Pods-Olie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Olie/Pods-Olie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDB3309F28AD61D02929501F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Olie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5255F67E245C911B003A246F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5255F6EF2460A655003A246F /* OlieView7.swift in Sources */,
+				5255F6DC245F9853003A246F /* Tag.swift in Sources */,
+				5255F6B4245D0409003A246F /* OlieView2.swift in Sources */,
+				5255F686245C911B003A246F /* AppDelegate.swift in Sources */,
+				5255F69B245C91F0003A246F /* FeedbackViewController.swift in Sources */,
+				5255F6BA245D09DE003A246F /* Services.swift in Sources */,
+				5255F6D6245F14DA003A246F /* OlieScrollView.swift in Sources */,
+				5255F6AC245CA304003A246F /* Styleable.swift in Sources */,
+				5255F6D4245F10A1003A246F /* OlieButton.swift in Sources */,
+				5255F6E724608712003A246F /* OlieView6.swift in Sources */,
+				5255F6E324604190003A246F /* TagsViewController.swift in Sources */,
+				5255F688245C911B003A246F /* SceneDelegate.swift in Sources */,
+				5255F6EA2460A3D9003A246F /* SimulateViewController.swift in Sources */,
+				5255F6A4245C9F52003A246F /* OlieView1.swift in Sources */,
+				5255F6B2245CE3B5003A246F /* Olie+CGFloat.swift in Sources */,
+				5255F6CE245F01CC003A246F /* QuestionViewController.swift in Sources */,
+				5255F6DE245F9B1A003A246F /* OlieView4.swift in Sources */,
+				5255F6B0245CA4E9003A246F /* Olie+UIFont.swift in Sources */,
+				5255F6D9245F3BA0003A246F /* ActivityIndicator.swift in Sources */,
+				5255F6D0245F01FE003A246F /* QuestionViewModel.swift in Sources */,
+				5255F6BC245D0D44003A246F /* ServiceModels.swift in Sources */,
+				5255F6ED2460A52F003A246F /* SimulateViewModel.swift in Sources */,
+				5255F6A2245C9C2D003A246F /* Olie+UIColor.swift in Sources */,
+				5255F6AE245CA31B003A246F /* OlieLabel.swift in Sources */,
+				5255F6C4245DBE90003A246F /* ServicesError.swift in Sources */,
+				5255F69D245C920B003A246F /* FeedbackViewModel.swift in Sources */,
+				5255F69F245C9819003A246F /* FeedbackCoordinator.swift in Sources */,
+				5255F6E0245FA971003A246F /* OlieView5.swift in Sources */,
+				5255F6D2245F0F4E003A246F /* OlieView3.swift in Sources */,
+				5255F6B7245D09AF003A246F /* ServicesProtocol.swift in Sources */,
+				5255F6CC245F01B8003A246F /* QuestionCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5255F690245C911C003A246F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5255F691245C911C003A246F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5255F694245C911C003A246F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5255F695245C911C003A246F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5255F697245C911C003A246F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6631F8F1831DEC6C898A77D6 /* Pods-Olie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Olie/Preview Content\"";
+				DEVELOPMENT_TEAM = ESBBYHNATR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Olie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Olie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5255F698245C911C003A246F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7AD4B5E80FCB79F4C4484E /* Pods-Olie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Olie/Preview Content\"";
+				DEVELOPMENT_TEAM = ESBBYHNATR;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Olie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Olie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5255F67D245C911B003A246F /* Build configuration list for PBXProject "Olie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5255F694245C911C003A246F /* Debug */,
+				5255F695245C911C003A246F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5255F696245C911C003A246F /* Build configuration list for PBXNativeTarget "Olie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5255F697245C911C003A246F /* Debug */,
+				5255F698245C911C003A246F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5255F67A245C911B003A246F /* Project object */;
+}
