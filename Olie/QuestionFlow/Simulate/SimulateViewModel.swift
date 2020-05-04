@@ -1,5 +1,6 @@
 import RxSwift
 import RxCocoa
+import RxSwiftExt
 
 final class SimulateViewModel {
     
@@ -53,11 +54,43 @@ final class SimulateViewModel {
     }
     
     func dynamicInput(
+        refreshButtonTap: Observable<Void>,
         bottomButtonTap: Observable<Void>
-    ) {
-        bottomButtonTap
-            .map { _ in .confirmation }
-            .bind(to: navigationPublisher)
-            .disposed(by: disposeBag)
+    ) -> (
+        question: Driver<String>,
+        loading: Driver<Bool>
+        ) {
+            
+            bottomButtonTap
+                .map { _ in .confirmation }
+                .bind(to: navigationPublisher)
+                .disposed(by: disposeBag)
+            
+            let questionsTracker = ActivityIndicator()
+            
+            let questionsFromFirstRequest = slug
+                .flatMapLatest { [getQuestions, questionsTracker] in getQuestions($0, questionsTracker) }
+            
+            let questionsFromRefresh = refreshButtonTap
+                .withLatestFrom(slug)
+                .flatMapLatest { [getQuestions, questionsTracker] in getQuestions($0, questionsTracker) }
+            
+            let question = Observable.merge(questionsFromFirstRequest, questionsFromRefresh)
+                .map { $0.sample_questions }
+                .map { $0.first }
+                .unwrap()
+                .asDriver(onErrorJustReturn: "")
+            
+            return (
+                question: question,
+                loading: questionsTracker.asDriver(onErrorJustReturn: false)
+            )
+    }
+    
+    func getQuestions(slug: String, tracker: ActivityIndicator) -> Observable<Questions> {
+        return services.questions(slug: slug)
+            .asObservable()
+            .trackActivity(tracker)
+            .catchError { error -> Observable<Questions> in return .empty() }
     }
 }

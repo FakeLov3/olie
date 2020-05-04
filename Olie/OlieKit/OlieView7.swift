@@ -2,6 +2,13 @@ import UIKit
 
 final class OlieView7: UIView {
     
+    let activityIndicator: UIActivityIndicatorView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.startAnimating()
+        $0.hidesWhenStopped = true
+        return $0
+    }(UIActivityIndicatorView(style: .medium))
+    
     let imageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.image = UIImage(named: "icon_profile")
@@ -14,6 +21,12 @@ final class OlieView7: UIView {
         $0.apply(style: .tag)
         return $0
     }(OlieButton())
+    
+    let refreshButton: UIButton = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setImage(UIImage(named: "icon_refresh"), for: .normal)
+        return $0
+    }(UIButton())
     
     let titleLabel: OlieLabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +60,10 @@ final class OlieView7: UIView {
         setupTag()
         setupTitleLabel()
         setupSubtitleLabel()
+        setupRefreshButton()
         setupMessageLabel()
         setupBottomView()
+        setupActivityIndicator()
     }
     
     @available(*, unavailable)
@@ -101,13 +116,22 @@ final class OlieView7: UIView {
         ])
     }
     
+    private func setupRefreshButton() {
+        addSubview(refreshButton)
+        
+        NSLayoutConstraint.activate([
+            refreshButton.topAnchor.constraint(equalTo: tagButton.bottomAnchor, constant: .large),
+            trailingAnchor.constraint(equalTo: refreshButton.trailingAnchor)
+        ])
+    }
+    
     private func setupMessageLabel() {
         addSubview(messageLabel)
         
         NSLayoutConstraint.activate([
-            messageLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: .large),
+            messageLabel.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: .large),
             messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor)
+            messageLabel.trailingAnchor.constraint(equalTo: refreshButton.leadingAnchor, constant: .large)
         ])
     }
     
@@ -120,6 +144,15 @@ final class OlieView7: UIView {
             trailingAnchor.constraint(equalTo: bottomView.trailingAnchor),
             bottomAnchor.constraint(equalTo: bottomView.bottomAnchor),
             bottomView.heightAnchor.constraint(equalToConstant: 2.0)
+        ])
+    }
+    
+    private func setupActivityIndicator() {
+        addSubview(activityIndicator)
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: messageLabel.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: messageLabel.centerXAnchor)
         ])
     }
 }

@@ -77,7 +77,25 @@ final class SimulateViewController: UIViewController {
             .drive(bottomButton.rx.title())
             .disposed(by: disposeBag)
         
-        viewModel.dynamicInput(bottomButtonTap: bottomButton.rx.tap.asObservable())
+        let dynamicOutput = viewModel.dynamicInput(
+            refreshButtonTap: olieView7.refreshButton.rx.tap.asObservable(),
+            bottomButtonTap: bottomButton.rx.tap.asObservable()
+        )
+        
+        dynamicOutput.loading
+            .drive(olieView7.activityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        dynamicOutput.loading
+            .filter { $0 }
+            .map { _ in "" }
+            .drive(olieView7.messageLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        dynamicOutput.question
+            .drive(olieView7.messageLabel.rx.text)
+            .disposed(by: disposeBag)
+        
     }
     
     private func setupView() {
