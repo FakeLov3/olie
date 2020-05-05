@@ -116,6 +116,9 @@ final class SimulateViewController: UIViewController {
     
     private func setupView() {
         view.backgroundColor = .primaryLightest
+        
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
     }
     
     private func setupScrollView() {
