@@ -39,10 +39,10 @@ final class Services: ServicesProtocol {
         })
     }
     
-    func anwser(_ awnser: Awnser) -> Single<Void> {
+    func answer(_ awnser: Answer) -> Single<Void> {
         return .create(subscribe: { single in
             AF.request(
-                "https://olie.tech/api/v1/awnser/",
+                "https://olie.tech/api/v1/answer/",
                 method: .post,
                 parameters: awnser,
                 encoder: JSONParameterEncoder.default)

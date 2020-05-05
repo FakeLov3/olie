@@ -66,7 +66,7 @@ struct Questions: Decodable {
     let sample_questions: [String]
 }
 
-struct Awnser: Encodable {
+struct Answer: Encodable {
     let text: String
     let tag: String
 }

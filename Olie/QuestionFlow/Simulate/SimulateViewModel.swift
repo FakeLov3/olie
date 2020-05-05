@@ -79,7 +79,7 @@ final class SimulateViewModel {
                 .asDriver(onErrorJustReturn: "")
             
             let awnserParameters = Observable.combineLatest(anwser.asObserver(), slug.asObserver())
-                .map { Awnser(text: $0.0, tag: $0.1) }
+                .map { Answer(text: $0.0, tag: $0.1) }
             
             let awnserTracker = ActivityIndicator()
             
@@ -120,8 +120,8 @@ final class SimulateViewModel {
             .catchError { error -> Observable<Questions> in return .empty() }
     }
     
-    func postAwnser(_ awnser: Awnser, tracker: ActivityIndicator) -> Observable<Void> {
-        return services.anwser(awnser)
+    func postAwnser(_ awnser: Answer, tracker: ActivityIndicator) -> Observable<Void> {
+        return services.answer(awnser)
             .asObservable()
             .trackActivity(tracker)
             .catchError { error -> Observable<Void> in return .empty() }
