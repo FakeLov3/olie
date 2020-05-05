@@ -58,13 +58,10 @@ final class SimulateViewModel {
         bottomButtonTap: Observable<Void>
     ) -> (
         question: Driver<String>,
-        loading: Driver<Bool>
+        loadingQuestion: Driver<Bool>,
+        loadingAwnser: Driver<Bool>,
+        bottomButtonTitle: Driver<String>
         ) {
-            
-            bottomButtonTap
-                .map { _ in .confirmation }
-                .bind(to: navigationPublisher)
-                .disposed(by: disposeBag)
             
             let questionsTracker = ActivityIndicator()
             
@@ -81,9 +78,38 @@ final class SimulateViewModel {
                 .unwrap()
                 .asDriver(onErrorJustReturn: "")
             
+            let awnserParameters = Observable.combineLatest(anwser.asObserver(), slug.asObserver())
+                .map { Awnser(text: $0.0, tag: $0.1) }
+            
+            let awnserTracker = ActivityIndicator()
+            
+            let bottomButtonTitle1 = awnserTracker
+                .asObservable()
+                .filter { $0 }
+                .map { _ in "" }
+                
+            
+            let bottomButtonTitle2 = awnserTracker
+                .asObservable()
+                .filter { !$0 }
+                .map { _ in "Confirmar resposta" }
+                
+            
+            let bottomButtonTitle = Observable.merge(bottomButtonTitle1, bottomButtonTitle2)
+                .asDriver(onErrorJustReturn: "")
+            
+            bottomButtonTap
+                .withLatestFrom(awnserParameters)
+                .flatMapLatest { [postAwnser, awnserTracker] in postAwnser($0, awnserTracker) }
+                .map { _ in .confirmation }
+                .bind(to: navigationPublisher)
+                .disposed(by: disposeBag)
+            
             return (
                 question: question,
-                loading: questionsTracker.asDriver(onErrorJustReturn: false)
+                loadingQuestion: questionsTracker.asDriver(onErrorJustReturn: false),
+                loadingAwnser: awnserTracker.asDriver(onErrorJustReturn: false),
+                bottomButtonTitle: bottomButtonTitle
             )
     }
     
@@ -92,5 +118,12 @@ final class SimulateViewModel {
             .asObservable()
             .trackActivity(tracker)
             .catchError { error -> Observable<Questions> in return .empty() }
+    }
+    
+    func postAwnser(_ awnser: Awnser, tracker: ActivityIndicator) -> Observable<Void> {
+        return services.anwser(awnser)
+            .asObservable()
+            .trackActivity(tracker)
+            .catchError { error -> Observable<Void> in return .empty() }
     }
 }

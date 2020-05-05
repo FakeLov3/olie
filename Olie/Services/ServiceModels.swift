@@ -65,3 +65,8 @@ struct ModelClass: Decodable {
 struct Questions: Decodable {
     let sample_questions: [String]
 }
+
+struct Awnser: Encodable {
+    let text: String
+    let tag: String
+}

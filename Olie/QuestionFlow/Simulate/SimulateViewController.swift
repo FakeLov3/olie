@@ -4,6 +4,14 @@ import RxCocoa
 
 final class SimulateViewController: UIViewController {
     
+    let activityIndicator: UIActivityIndicatorView = {
+        $0.color = .primaryLightest
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.startAnimating()
+        $0.hidesWhenStopped = true
+        return $0
+    }(UIActivityIndicatorView(style: .medium))
+    
     let scrollView = OlieScrollView()
     
     private let contentScrollView: UIView = {
@@ -45,6 +53,7 @@ final class SimulateViewController: UIViewController {
         setupOlieView7()
         setupOlieView6()
         setupBottomButton()
+        setupActivityIndicator()
         
         let staticOutput =  viewModel.staticInput()
         
@@ -82,11 +91,11 @@ final class SimulateViewController: UIViewController {
             bottomButtonTap: bottomButton.rx.tap.asObservable()
         )
         
-        dynamicOutput.loading
+        dynamicOutput.loadingQuestion
             .drive(olieView7.activityIndicator.rx.isAnimating)
             .disposed(by: disposeBag)
         
-        dynamicOutput.loading
+        dynamicOutput.loadingQuestion
             .filter { $0 }
             .map { _ in "" }
             .drive(olieView7.messageLabel.rx.text)
@@ -96,6 +105,13 @@ final class SimulateViewController: UIViewController {
             .drive(olieView7.messageLabel.rx.text)
             .disposed(by: disposeBag)
         
+        dynamicOutput.loadingAwnser
+            .drive(activityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        dynamicOutput.bottomButtonTitle
+            .drive(bottomButton.rx.title())
+            .disposed(by: disposeBag)
     }
     
     private func setupView() {
@@ -158,6 +174,15 @@ final class SimulateViewController: UIViewController {
             contentScrollView.trailingAnchor.constraint(equalTo: bottomButton.trailingAnchor),
             contentScrollView.bottomAnchor.constraint(equalTo: bottomButton.bottomAnchor),
             bottomButton.heightAnchor.constraint(equalToConstant: 52.0)
+        ])
+    }
+    
+    private func setupActivityIndicator() {
+        contentScrollView.addSubview(activityIndicator)
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerYAnchor.constraint(equalTo: bottomButton.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: bottomButton.centerXAnchor)
         ])
     }
     

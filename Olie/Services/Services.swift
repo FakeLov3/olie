@@ -38,4 +38,23 @@ final class Services: ServicesProtocol {
             return Disposables.create()
         })
     }
+    
+    func anwser(_ awnser: Awnser) -> Single<Void> {
+        return .create(subscribe: { single in
+            AF.request(
+                "https://olie.tech/api/v1/awnser/",
+                method: .post,
+                parameters: awnser,
+                encoder: JSONParameterEncoder.default)
+                .response { response in
+                    if let _ = response.value {
+                        single(.success(Void()))
+                    } else {
+                        single(.error(ServiceError.genericError))
+                    }
+                }
+            
+            return Disposables.create()
+        })
+    }
 }
